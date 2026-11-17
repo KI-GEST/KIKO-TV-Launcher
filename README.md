@@ -2,14 +2,14 @@
 
 Launcher Android TV en interface **arabe RTL** avec IPTV, Coran, Adhan et invocations, météo et horaires de prière. Cible : Mi TV Stick / Android TV (API 28+, écran paysage verrouillé).
 
-Version : **1.2** (versionCode 3) · Package : `com.kiko.tvlauncher`
+Version : **1.3** (versionCode 4) · Package : `com.kiko.tvlauncher`
 
-> **Installation sur téléphone :** depuis la v1.1, l'APK s'installe aussi sur un téléphone Android 9+ (la fonctionnalité Android TV `leanback` est optionnelle). L'interface reste optimisée pour Android TV. Depuis la v1.2, les boutons lecture/pause et retour du lecteur sont cliquables au toucher.
+> **Installation sur téléphone :** depuis la v1.1, l'APK s'installe aussi sur un téléphone Android 9+ (la fonctionnalité Android TV `leanback` est optionnelle). L'interface reste optimisée pour Android TV. Depuis la v1.2, les boutons lecture/pause et retour du lecteur sont cliquables au toucher. Depuis la v1.3, la source iptv-org est ajoutée automatiquement même lors d'une mise à jour.
 
 ## Fonctionnalités
 
 - **Accueil** : horloge, date grégorienne et hijri, météo (Sfax par défaut), horaires de prière, message de pied.
-- **IPTV** : catalogue Direct / Films / Séries / Favoris en deux panneaux (liste à gauche, aperçu VLC à droite). Sources **M3U** et **Xtream Codes**. La source de démonstration importée au premier lancement est la liste publique **iptv-org** (`https://iptv-org.github.io/iptv/index.m3u`), avec repli hors ligne sur une petite playlist locale. Bouton d'ajout rapide iptv-org dans les sources.
+- **IPTV** : catalogue Direct / Films / Séries / Favoris en deux panneaux (liste à gauche, aperçu VLC à droite). Sources **M3U** et **Xtream Codes**. La liste publique **iptv-org** (`https://iptv-org.github.io/iptv/index.m3u`) est ajoutée automatiquement au premier lancement **et lors des mises à jour** (visible dans Réglages → مصادر IPTV). Bouton d'ajout rapide iptv-org dans les sources.
 - **Lecteur VLC intégré** (`libvlc-all:3.6.5`) pour HLS/M3U8, avec repli automatique ExoPlayer (Media3).
 - **Coran** : 114 sourates, texte Uthmani + traduction française, écoute verset par verset (Alafasy) avec barre lecture / pause / stop / muet.
 - **Adhan et invocations** : 3 voix d'adhan embarquées et 21 invocations (arabe + français).
@@ -19,7 +19,7 @@ Version : **1.2** (versionCode 3) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-Téléchargez l'APK depuis la section **Releases** (dernière version : **v1.2**), puis installez-le :
+Téléchargez l'APK depuis la section **Releases** (dernière version : **v1.3**), puis installez-le :
 
 ```powershell
 adb install -r app-debug.apk
