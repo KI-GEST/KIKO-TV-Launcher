@@ -2,7 +2,9 @@
 
 Launcher Android TV en interface **arabe RTL** avec IPTV, Coran, Adhan et invocations, météo et horaires de prière. Cible : Mi TV Stick / Android TV (API 28+, écran paysage verrouillé).
 
-Version : **1.0** (versionCode 1) · Package : `com.kiko.tvlauncher`
+Version : **1.1** (versionCode 2) · Package : `com.kiko.tvlauncher`
+
+> **Installation sur téléphone :** depuis la v1.1, l'APK s'installe aussi sur un téléphone Android 9+ (la fonctionnalité Android TV `leanback` est optionnelle). L'interface reste optimisée pour Android TV.
 
 ## Fonctionnalités
 
@@ -17,13 +19,13 @@ Version : **1.0** (versionCode 1) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-Téléchargez l'APK depuis la section **Releases**, puis installez-le sur votre appareil Android TV :
-
-Le fichier téléchargé s'appelle `app-debug.apk` (libellé `KIKO-TV-Launcher-v1.0.apk` dans la Release) :
+Téléchargez l'APK depuis la section **Releases** (dernière version : **v1.1**), puis installez-le :
 
 ```powershell
-adb install -r app-debug.apk
+adb install -r KIKO-TV-Launcher-v1.1.apk
 ```
+
+Si vous installez depuis le gestionnaire de fichiers du téléphone, autorisez l'installation d'applications de sources inconnues. La v1.0 portait le nom de fichier `app-debug.apk`.
 
 > L'APK de debug est volumineux (~290 Mo) car les bibliothèques natives VLC sont fournies pour `arm64-v8a`, `armeabi-v7a`, `x86` et `x86_64`.
 
