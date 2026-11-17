@@ -19,8 +19,10 @@ Version : **1.0** (versionCode 1) · Package : `com.kiko.tvlauncher`
 
 Téléchargez l'APK depuis la section **Releases**, puis installez-le sur votre appareil Android TV :
 
+Le fichier téléchargé s'appelle `app-debug.apk` (libellé `KIKO-TV-Launcher-v1.0.apk` dans la Release) :
+
 ```powershell
-adb install -r KIKO-TV-Launcher-v1.0.apk
+adb install -r app-debug.apk
 ```
 
 > L'APK de debug est volumineux (~290 Mo) car les bibliothèques natives VLC sont fournies pour `arm64-v8a`, `armeabi-v7a`, `x86` et `x86_64`.
