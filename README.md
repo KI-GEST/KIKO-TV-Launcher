@@ -2,11 +2,11 @@
 
 Launcher **Android TV en interface arabe RTL** avec IPTV/VLC, Coran, Adhan, horaires de prière, météo et fonds d’écran. Le lanceur cible le **Xiaomi Mi TV Stick 1re génération** (`MiTV-AESP0` / `MDZ-24-AA`, Android TV 9) et fonctionne aussi sur smartphone Android 9+ en paysage.
 
-**Version actuelle : v2.5** (versionCode 17) · Package : `com.kiko.tvlauncher`
+**Version actuelle : v2.6** (versionCode 18) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **v2.5**).
+1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **v2.6**).
 2. Installez-le sur l’appareil :
 
 ```powershell
@@ -15,12 +15,12 @@ adb install -r KIKO-TV.apk
 
 Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone, autorisez l’installation depuis des sources inconnues. L’APK publié est la variante **ARM 32 bits (`armeabi-v7a`)**, signée avec la même clé debug que les versions précédentes : la mise à jour depuis l’application fonctionne donc sans désinstallation.
 
-> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **v2.1**, **v2.2**, **v2.3**, **v2.4** et **v2.5** sont conservées sur GitHub.
+> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **v2.1**, **v2.2**, **v2.3**, **v2.4**, **v2.5** et **v2.6** sont conservées sur GitHub.
 
 ## Fonctionnalités
 
 - **Accueil** : horloge et date configurables (24 h / 12 h, secondes, date grégorienne, hijri ou les deux), météo (Sfax par défaut), horaires de prière, message de pied et tuiles d’accès rapide. Sur Android TV, la barre latérale est conservée ; la section « derniers ajouts » a été supprimée. Sur smartphone, une barre de navigation basse remplace la barre latérale et les barres système sont masquées. L’orientation est verrouillée en paysage.
-- **IPTV** : catalogue Direct / Films / Séries / Favoris. Sources **M3U** et **Xtream Codes**. La liste publique **iptv-org** (`https://iptv-org.github.io/iptv/index.m3u`) est ajoutée automatiquement au premier lancement et lors des mises à jour, avec un bouton d’ajout rapide dans Réglages → مصادر IPTV.
+- **IPTV** : catalogue Direct / Films / Séries / Favoris. Sources **M3U** et **Xtream Codes**, avec ajout, **modification** (`تعديل`) et synchronisation depuis Réglages → المصادر. La liste publique **iptv-org** (`https://iptv-org.github.io/iptv/index.m3u`) est ajoutée automatiquement au premier lancement et lors des mises à jour, avec un bouton d’ajout rapide dans Réglages → مصادر IPTV.
 - **Lecteur** : **VLC intégré** (`libvlc-all`) pour HLS/M3U8, avec repli automatique **ExoPlayer / Media3**.
 - **Coran** : 114 sourates, texte Uthmani et traduction française, lecture verset par verset ou sourate entière, contrôles lecture / pause / stop / muet. Le bandeau jaune suit le verset en cours, y compris avec le réciteur Yasser Al-Dousri.
 - **Adhan et invocations** : trois voix d’adhan embarquées ; le réciteur choisi est mémorisé et utilisé automatiquement quand l’alarme de prière sonne. 21 invocations en arabe et en français, dont deux avec audio embarqué ; les autres utilisent le moteur vocal arabe de l’appareil. La **roqia charia** reprend la source Al Jazeera : 21 éléments (5 versets avec récitation audio, 4 passages coraniques et 12 invocations prophétiques) avec texte arabe/français, références et repli vocal arabe.
