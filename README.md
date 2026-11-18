@@ -33,3 +33,7 @@ Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone,
 - La météo (Open-Meteo) et la récitation coranique nécessitent une connexion Internet ; les voix d’adhan et le texte du Coran sont embarqués.
 - Les contenus IPTV sont fournis par l’utilisateur : l’application est uniquement un lecteur et ne fournit aucun contenu.
 - Licences : Coran arabe et traduction Hamidullah (quran.com), voix d’adhan CC BY-SA / CC0, fonds d’écran Wikimedia Commons, police Tajawal (OFL).
+
+## Hashtags
+
+#KIKOTV #KIKOLauncher #AndroidTV #IPTV #VLC #Quran #Adhan #PrayerTimes #MiTVStick #XiaomiTVStick #AndroidTVLauncher #RTL #OpenSource #قرآن #أذان
