@@ -2,11 +2,11 @@
 
 Launcher **Android TV en interface arabe RTL** avec IPTV/VLC, Coran, Adhan, horaires de prière, météo et fonds d’écran. Le lanceur cible le **Xiaomi Mi TV Stick 1re génération** (`MiTV-AESP0` / `MDZ-24-AA`, Android TV 9) et fonctionne aussi sur smartphone Android 9+ en paysage.
 
-**Version actuelle : v2.6** (versionCode 18) · Package : `com.kiko.tvlauncher`
+**Version actuelle : v2.7** (versionCode 19) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **v2.6**).
+1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **v2.7**).
 2. Installez-le sur l’appareil :
 
 ```powershell
@@ -15,7 +15,7 @@ adb install -r KIKO-TV.apk
 
 Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone, autorisez l’installation depuis des sources inconnues. L’APK publié est la variante **ARM 32 bits (`armeabi-v7a`)**, signée avec la même clé debug que les versions précédentes : la mise à jour depuis l’application fonctionne donc sans désinstallation.
 
-> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **v2.1**, **v2.2**, **v2.3**, **v2.4**, **v2.5** et **v2.6** sont conservées sur GitHub.
+> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **v2.1**, **v2.2**, **v2.3**, **v2.4**, **v2.5**, **v2.6** et **v2.7** sont conservées sur GitHub.
 
 ## Fonctionnalités
 
