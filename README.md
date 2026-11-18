@@ -1,36 +1,35 @@
 # KIKO TV Launcher
 
-Launcher Android TV en interface **arabe RTL** avec IPTV, Coran, Adhan et invocations, météo et horaires de prière. Cible : Mi TV Stick / Android TV (API 28+, écran paysage verrouillé).
+Launcher **Android TV en interface arabe RTL** avec IPTV/VLC, Coran, Adhan, horaires de prière, météo et fonds d’écran. Le lanceur cible le **Xiaomi Mi TV Stick 1re génération** (`MiTV-AESP0` / `MDZ-24-AA`, Android TV 9) et fonctionne aussi sur smartphone Android 9+ en paysage.
 
-Version : **1.3** (versionCode 4) · Package : `com.kiko.tvlauncher`
-
-> **Installation sur téléphone :** depuis la v1.1, l'APK s'installe aussi sur un téléphone Android 9+ (la fonctionnalité Android TV `leanback` est optionnelle). L'interface reste optimisée pour Android TV. Depuis la v1.2, les boutons lecture/pause et retour du lecteur sont cliquables au toucher. Depuis la v1.3, la source iptv-org est ajoutée automatiquement même lors d'une mise à jour.
-
-## Fonctionnalités
-
-- **Accueil** : horloge, date grégorienne et hijri, météo (Sfax par défaut), horaires de prière, message de pied.
-- **IPTV** : catalogue Direct / Films / Séries / Favoris en deux panneaux (liste à gauche, aperçu VLC à droite). Sources **M3U** et **Xtream Codes**. La liste publique **iptv-org** (`https://iptv-org.github.io/iptv/index.m3u`) est ajoutée automatiquement au premier lancement **et lors des mises à jour** (visible dans Réglages → مصادر IPTV). Bouton d'ajout rapide iptv-org dans les sources.
-- **Lecteur VLC intégré** (`libvlc-all:3.6.5`) pour HLS/M3U8, avec repli automatique ExoPlayer (Media3).
-- **Coran** : 114 sourates, texte Uthmani + traduction française, écoute verset par verset (Alafasy) avec barre lecture / pause / stop / muet.
-- **Adhan et invocations** : 3 voix d'adhan embarquées et 21 invocations (arabe + français).
-- **Horaires de prière** : calcul local via adhan-java, méthode **Muslim World League (MWL)** par défaut (identique à Muslim Pro pour la Tunisie). Réglages : ville, méthode (11), madhab (Shafi/Hanafi), ajustement de −60 à +60 min par prière. Référence vérifiée (Sfax, 17 nov. 2026) : Fajr 05:25, Dhuhr 12:02, Asr 14:50, Maghrib 17:11, Isha 18:34.
-- **Réglages défilants** : sources IPTV, fond d'écran (+ import personnalisé), langue (ar / fr / en), ville, prière, adhan.
-- **Chiffres latins 0-9** partout (pas de chiffres arabo-indiens).
+**Version actuelle : v2.2** (versionCode 14) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-Téléchargez l'APK depuis la section **Releases** (dernière version : **v1.3**), puis installez-le :
+1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **v2.2**).
+2. Installez-le sur l’appareil :
 
 ```powershell
-adb install -r app-debug.apk
+adb install -r KIKO-TV.apk
 ```
 
-Si vous installez depuis le gestionnaire de fichiers du téléphone, autorisez l'installation d'applications de sources inconnues. Le fichier téléchargé s'appelle `app-debug.apk` (les releases sont immuables, donc le nom d'origine est conservé).
+Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone, autorisez l’installation depuis des sources inconnues. L’APK publié est la variante **ARM 32 bits (`armeabi-v7a`)**, signée avec la même clé debug que les versions précédentes : la mise à jour depuis l’application fonctionne donc sans désinstallation.
 
-> L'APK de debug est volumineux (~285 Mo) car les bibliothèques natives VLC sont fournies pour `arm64-v8a`, `armeabi-v7a`, `x86` et `x86_64`.
+> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Seules les versions **v2.1** et **v2.2** sont conservées sur GitHub.
+
+## Fonctionnalités
+
+- **Accueil** : horloge et date configurables (24 h / 12 h, secondes, date grégorienne, hijri ou les deux), météo (Sfax par défaut), horaires de prière, message de pied et tuiles d’accès rapide. Sur Android TV, la barre latérale et le carrousel « derniers ajouts » sont conservés ; sur smartphone, une barre de navigation basse les remplace et les barres système sont masquées. L’orientation est verrouillée en paysage.
+- **IPTV** : catalogue Direct / Films / Séries / Favoris. Sources **M3U** et **Xtream Codes**. La liste publique **iptv-org** (`https://iptv-org.github.io/iptv/index.m3u`) est ajoutée automatiquement au premier lancement et lors des mises à jour, avec un bouton d’ajout rapide dans Réglages → مصادر IPTV.
+- **Lecteur** : **VLC intégré** (`libvlc-all`) pour HLS/M3U8, avec repli automatique **ExoPlayer / Media3**.
+- **Coran** : 114 sourates, texte Uthmani et traduction française, lecture verset par verset ou sourate entière, contrôles lecture / pause / stop / muet. Le bandeau jaune suit le verset en cours, y compris avec le réciteur Yasser Al-Dousri.
+- **Adhan et invocations** : trois voix d’adhan embarquées ; le réciteur choisi est mémorisé et utilisé automatiquement quand l’alarme de prière sonne. 21 invocations en arabe et en français.
+- **Horaires de prière** : calcul local via `adhan-java`, méthode **Muslim World League (MWL)** par défaut. Réglages : ville, méthode (11), madhab (Shafi / Hanafi) et ajustement de −60 à +60 minutes par prière.
+- **Réglages** : sources IPTV, fond d’écran (+ import personnalisé), langue (ar / fr / en), ville, prière, voix de l’adhan, date/heure, vérification des mises à jour et effacement des données.
+- **Interface** : chiffres latins `0-9` partout, mise en page responsive TV / téléphone, thème marine et or, logo personnalisé.
 
 ## Notes
 
-- La météo (Open-Meteo) et la récitation coranique nécessitent Internet ; les voix d'adhan et le texte du Coran sont hors ligne.
-- Les contenus IPTV sont fournis par l'utilisateur ; l'application est uniquement un lecteur.
-- Licences : Coran arabe et traduction Hamidullah (quran.com), voix d'adhan CC BY-SA / CC0, fonds d'écran Wikimedia Commons, police Tajawal (OFL).
+- La météo (Open-Meteo) et la récitation coranique nécessitent une connexion Internet ; les voix d’adhan et le texte du Coran sont embarqués.
+- Les contenus IPTV sont fournis par l’utilisateur : l’application est uniquement un lecteur et ne fournit aucun contenu.
+- Licences : Coran arabe et traduction Hamidullah (quran.com), voix d’adhan CC BY-SA / CC0, fonds d’écran Wikimedia Commons, police Tajawal (OFL).
