@@ -2,11 +2,11 @@
 
 Launcher **Android TV en interface arabe RTL** avec IPTV/VLC, Coran, Adhan vidéo, horaires de prière, météo et fonds d’écran. Le lanceur cible le **Xiaomi Mi TV Stick 1re génération** (`MiTV-AESP0` / `MDZ-24-AA`, Android TV 9) et fonctionne aussi sur smartphone Android 9+ en paysage.
 
-**Version actuelle : v3.3** (versionCode 25) · Package : `com.kiko.tvlauncher`
+**Version actuelle : v3.4** (versionCode 26) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **3.3**).
+1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **3.4**).
 2. Installez-le sur l’appareil :
 
 ```powershell
@@ -15,7 +15,7 @@ adb install -r KIKO-TV.apk
 
 Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone, autorisez l’installation depuis des sources inconnues. L’APK publié est la variante **ARM 32 bits (`armeabi-v7a`)**, signée avec la même clé que les versions précédentes : la mise à jour depuis l’application fonctionne donc sans désinstallation.
 
-> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **2.1** à **2.9**, **3.0**, **3.1**, **3.2** et **3.3** sont conservées sur GitHub. Chaque release est immuable.
+> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **2.1** à **2.9**, **3.0**, **3.1**, **3.2**, **3.3** et **3.4** sont conservées sur GitHub. Chaque release est immuable.
 
 ## Fonctionnalités
 
@@ -25,6 +25,7 @@ Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone,
 - **Coran** : 114 sourates, texte Uthmani et traduction française, lecture verset par verset ou sourate entière, contrôles lecture / pause / stop / muet. Le bandeau jaune suit le verset en cours, y compris avec le réciteur Yasser Al-Dousri.
 - **Adhan vidéo** : à **chaque heure de prière**, la vidéo « Adhan (Azan) — The Call to Prayer » est affichée en **plein écran avec son audio**. Le diaporama et la lecture audio séparée ont été supprimés. La vidéo 480p (14 Mo) est embarquée et copiée dans le stockage interne au premier lancement : **aucun réseau n’est nécessaire** à l’heure de la prière. L’écran propose **Arrêter** et **Rappel dans 5 min**, accessibles à la télécommande ; le bouton Retour arrête également l’adhan. La notification de premier plan propose les mêmes actions.
 - **Voix d’adhan** : quatre voix embarquées, dont `adhan_voice4.mp3` (Assabile). Le réciteur choisi est mémorisé et sert à l’**aperçu manuel** dans l’onglet Adhan ; l’alarme, elle, joue la vidéo. Un rappel est affiché dans les réglages pour éviter toute confusion.
+- **Widget adhan (smartphone uniquement)** : le widget « أذان كيكو » affiche la prochaine prière, son heure et la ville. Le bouton **▶** lit la voix d’adhan choisie **avec le son** (notification Arrêter, arrêt automatique en fin de lecture) ; un appui ailleurs ouvre l’application. Le widget est désactivé sur Android TV / Leanback.
 - **Invocations et roqia** : 21 invocations en arabe et en français, dont deux avec audio embarqué ; les autres utilisent le moteur vocal arabe de l’appareil. La **roqia charia** reprend la source Al Jazeera : 21 éléments (5 versets avec récitation audio, 4 passages coraniques et 12 invocations prophétiques) avec texte arabe/français, références et repli vocal arabe.
 - **Horaires de prière** : calcul local via `adhan-java`, méthode **Tunisie (18°/18° + 5 min au Maghreb, convention Yabiladi)** par défaut. Réglages : ville, méthode (12), madhab (Shafi / Hanafi) et ajustement de −60 à +60 minutes par prière.
 - **Réglages** : sources IPTV, fond d’écran (+ import personnalisé), langue (ar / fr / en), ville, prière, voix de l’adhan (aperçu), date/heure, vérification des mises à jour et effacement des données.
