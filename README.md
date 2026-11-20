@@ -2,11 +2,11 @@
 
 Launcher **Android TV en interface arabe RTL** avec IPTV/VLC, Coran, Adhan vidéo, horaires de prière, météo et fonds d’écran. Le lanceur cible le **Xiaomi Mi TV Stick 1re génération** (`MiTV-AESP0` / `MDZ-24-AA`, Android TV 9) et fonctionne aussi sur smartphone Android 9+ en paysage.
 
-**Version actuelle : v4.0** (versionCode 32) · Package : `com.kiko.tvlauncher`
+**Version actuelle : v4.1** (versionCode 33) · Package : `com.kiko.tvlauncher`
 
 ## Installation
 
-1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **4.0**).
+1. Téléchargez **`KIKO-TV.apk`** depuis la section [Releases](https://github.com/KI-GEST/KIKO-TV-Launcher/releases) (dernière version : **4.1**).
 2. Installez-le sur l’appareil :
 
 ```powershell
@@ -15,14 +15,14 @@ adb install -r KIKO-TV.apk
 
 Si vous installez depuis le gestionnaire de fichiers de la TV ou du téléphone, autorisez l’installation depuis des sources inconnues. L’APK publié est la variante **ARM 32 bits (`armeabi-v7a`)**, signée avec la même clé que les versions précédentes : la mise à jour depuis l’application fonctionne donc sans désinstallation.
 
-> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **2.1** à **2.9**, **3.0**, **3.1**, **3.2**, **3.3**, **3.4**, **3.5**, **3.6**, **3.7**, **3.8**, **3.9** et **4.0** sont conservées sur GitHub. Chaque release est immuable.
+> L’application vérifie elle-même `releases/latest` au lancement et télécharge l’APK en interne, avec barre de progression et installation automatique. Les versions **2.1** à **2.9**, **3.0**, **3.1**, **3.2**, **3.3**, **3.4**, **3.5**, **3.6**, **3.7**, **3.8**, **3.9**, **4.0** et **4.1** sont conservées sur GitHub. Chaque release est immuable.
 
 ## Fonctionnalités
 
 - **Accueil** : horloge et date configurables (24 h / 12 h, secondes, date grégorienne, hijri ou les deux), météo (Sfax par défaut), horaires de prière, mot du jour centré, message de pied et tuiles d’accès rapide. La navigation est une **ligne de libellés en bas de l’écran** ; une flèche permet de **masquer/réafficher toute la barre de menu**. Les chaînes favorites ne sont plus affichées sur l’accueil : elles sont accessibles uniquement depuis **« المفضلة »**, et les chaînes en direct sont exclues de « Continuer à regarder ». Orientation verrouillée en paysage.
 - **IPTV** : interface native Compose arabe RTL avec onglets Chaînes / Films / Séries, recherche, catégories, lecteur intégré et plein écran sans coupure du flux. Sources **M3U URL**, **Xtream Codes** et **import local `.m3u`/`.m3u8`**, gérées depuis l’écran IPTV (profil), avec ajout, modification (`تعديل`), activation et synchronisation. Accès au stockage TV / smartphone : autorisation « Tous les fichiers » (Android 11+), sélecteur système SAF et liste automatique des playlists locales. La section « المصادر » a été retirée des Réglages.
 - **Lecteur** : **VLC intégré** (`libvlc-all`) pour HLS/M3U8, avec repli automatique **ExoPlayer / Media3**. Le mode plein écran est réellement bord à bord sur TV et smartphone : aucun overscan, liseré, coin arrondi, barre de navigation ou bande d’encoche autour de la vidéo.
-- **Musique & Radio** : annuaire **Radio Browser** (données du domaine public) avec stations (`Toutes`), `Genres`, `Pays`, recherche, pagination et radio par défaut **Mosaïque FM** résolue dynamiquement. Repli hors ligne par playlists M3U **CC0** de `radio-playlists`. Onglet **Jamendo** avec clé `client_id` saisie dans les réglages (jamais embarquée) et licence gratuite usage non commercial affichée. La **couverture de la station s’affiche en haut de l’écran Radios, juste à côté du bouton « Clavier », dès le lancement de la lecture** (elle reste aussi visible dans la barre « En lecture ») lorsque le favicon (ou le `tvg-logo` M3U) est disponible, avec repli sur une icône sinon. Aucune URL de flux n’est codée en dur.
+- **Musique & Radio** : une seule ligne de catégories — `Toutes`, `Genres`, `Pays`, `Playlists CC0` et `Favoris` aligné à droite ; l’onglet « Musique en ligne » (Jamendo) et sa clé `client_id` dans les réglages ont été supprimés. Annuaire **Radio Browser** (données du domaine public) avec recherche et pagination, radio par défaut **Mosaïque FM** résolue dynamiquement, et playlists M3U **CC0** de `radio-playlists` en repli. La **couverture de la station s’affiche en haut de l’écran Radios, juste à côté du bouton « Clavier », dès le lancement de la lecture** (elle reste aussi visible dans la barre « En lecture ») lorsque le favicon (ou le `tvg-logo` M3U) est disponible, avec repli sur une icône sinon. Aucune URL de flux n’est codée en dur.
 - **Navigation télécommande** : champs de saisie, cartes et lignes de chaînes, vignettes de l’accueil, bandeau Chaînes / Films / Séries, catégories et profil IPTV, sources, chaque menu et sous-menu des réglages, boutons et lignes de sources affichent une **bordure dorée de 2 dp** lorsqu’ils reçoivent le focus. La bordure est dessinée par-dessus les vignettes pour rester visible partout. Le premier champ d’un formulaire est focalisé automatiquement.
 - **Coran** : 114 sourates, texte Uthmani et traduction française, lecture verset par verset ou sourate entière, contrôles lecture / pause / stop / muet. Le bandeau jaune suit le verset en cours, y compris avec le réciteur Yasser Al-Dousri.
 - **Adhan vidéo** : à **chaque heure de prière**, la vidéo « Adhan (Azan) — The Call to Prayer » est affichée en **plein écran avec son audio**. Le diaporama et la lecture audio séparée ont été supprimés. La vidéo 480p (14 Mo) est embarquée et copiée dans le stockage interne au premier lancement : **aucun réseau n’est nécessaire** à l’heure de la prière. L’écran propose **Arrêter** et **Rappel dans 5 min**, accessibles à la télécommande ; le bouton Retour arrête également l’adhan. La notification de premier plan propose les mêmes actions. Un bouton **« معاينة فيديو الأذان »** dans الإعدادات → إعدادات مواقيت الصلاة permet de tester la vidéo manuellement avec le son.
